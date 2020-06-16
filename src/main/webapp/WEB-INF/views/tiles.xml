@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- Base Definition -->
+    <definition name="base-definition"  template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+        <put-attribute name="nav" value="/WEB-INF/views/tiles/template/defaultNav.jsp" />
+        <put-attribute name="main" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="header.css" />
+            <add-attribute value="nav.css" />
+            <add-attribute value="styles.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts">
+        </put-list-attribute>
+    </definition>
+
+    <!-- User Sign In form  -->
+    <definition name="users/signin" extends="base-definition">
+        <put-attribute name="title" value="Sign In" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/users/signin.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- User Sign Up form  -->
+    <definition name="users/signup" extends="base-definition">
+        <put-attribute name="title" value="Sign Up" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/users/signup.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- User update account  -->
+    <definition name="users/update" extends="base-definition">
+        <put-attribute name="title" value="Update account" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/users/update.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+            <add-attribute value="account.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- User list  -->
+    <definition name="users/list" extends="base-definition">
+        <put-attribute name="title" value="User list" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/users/list.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+            <add-attribute value="tables.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- Note form  -->
+    <definition name="notes/form" extends="base-definition">
+        <put-attribute name="title" value="Add new note" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/notes/form.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- Note list  -->
+    <definition name="notes/list" extends="base-definition">
+        <put-attribute name="title" value="Note list" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/notes/list.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+            <add-attribute value="tables.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- Note view  -->
+    <definition name="notes/view" extends="base-definition">
+        <put-attribute name="title" value="Note page" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/notes/view.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+            <add-attribute value="modal.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="modalScript.js" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- Subscribers list  -->
+    <definition name="subscribers/list" extends="base-definition">
+        <put-attribute name="title" value="Subscribers page" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/subscribers/list.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+            <add-attribute value="tables.css" />
+        </put-list-attribute>
+    </definition>
+    <definition name="subscribers/subscriptionlist" extends="base-definition">
+        <put-attribute name="title" value="Subscriptions page" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/subscribers/subscriptionlist.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+            <add-attribute value="tables.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- 403 error page -->
+    <definition name="errors/403" extends="base-definition">
+        <put-attribute name="title" value="Access denied" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/errors/403.jsp" />
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+        </put-list-attribute>
+    </definition>
+
+    <!-- Content not found error page -->
+    <definition name="errors/exception" extends="base-definition">
+        <put-attribute name="title" value="Something goes wrong" />
+        <put-attribute name="main" value="/WEB-INF/views/pages/errors/exception.jsp" />
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="forms.css" />
+        </put-list-attribute>
+    </definition>
+
+
+
+
+</tiles-definitions>
